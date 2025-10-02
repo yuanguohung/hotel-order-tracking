@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS menu_categories (
     description TEXT,
     is_active BOOLEAN DEFAULT true,
     display_order INTEGER DEFAULT 0,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

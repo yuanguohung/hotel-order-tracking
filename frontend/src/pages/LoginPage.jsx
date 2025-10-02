@@ -125,15 +125,6 @@ const LoginPage = () => {
                 </span>
               </div>
             </div>
-
-            <div className="mt-4 text-sm text-gray-600 text-center">
-              <p>Tài khoản admin mặc định:</p>
-              <p className="font-mono bg-gray-100 p-2 rounded mt-2">
-                Username: admin
-                <br />
-                Password: admin123
-              </p>
-            </div>
           </div>
         </div>
       </div>
