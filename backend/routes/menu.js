@@ -90,7 +90,7 @@ router.get("/items/:id", async (req, res) => {
 router.get("/categories", async (req, res) => {
   try {
     const result = await pool.query(`
-      SELECT id, name, description, display_order
+      SELECT id, name, description, display_order, is_active
       FROM menu_categories 
       WHERE is_active = true
       ORDER BY display_order, name

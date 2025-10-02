@@ -235,8 +235,12 @@ router.get("/", authenticateToken, requireStaffOrAdmin, async (req, res) => {
     const params = [];
 
     if (status) {
-      conditions.push(`o.status = $${params.length + 1}`);
-      params.push(status);
+      const statusArray = status.split(",").map((s) => s.trim());
+      const placeholders = statusArray.map(
+        (_, idx) => `$${params.length + idx + 1}`
+      );
+      conditions.push(`o.status IN (${placeholders.join(",")})`);
+      params.push(...statusArray);
     }
 
     if (roomId) {
